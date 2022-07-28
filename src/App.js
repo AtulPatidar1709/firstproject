@@ -1,10 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
    return (
       <>
-         <nav className="navbar navbar-expand-lg bg-light">
+         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
                <a className="navbar-brand" href="/">
                   Navbar
@@ -43,13 +42,17 @@ function App() {
                         <a
                            className="nav-link dropdown-toggle"
                            href="/"
+                           id="navbarDropdown"
                            role="button"
                            data-bs-toggle="dropdown"
                            aria-expanded="false"
                         >
                            Dropdown
                         </a>
-                        <ul className="dropdown-menu">
+                        <ul
+                           className="dropdown-menu"
+                           aria-labelledby="navbarDropdown"
+                        >
                            <li>
                               <a className="dropdown-item" href="/">
                                  Action
@@ -71,10 +74,17 @@ function App() {
                         </ul>
                      </li>
                      <li className="nav-item">
-                        <a className="nav-link disabled">Disabled</a>
+                        <a
+                           className="nav-link disabled"
+                           href="/"
+                           tabindex="-1"
+                           aria-disabled="true"
+                        >
+                           Disabled
+                        </a>
                      </li>
                   </ul>
-                  <form className="d-flex" role="search">
+                  <form className="d-flex">
                      <input
                         className="form-control me-2"
                         type="search"
