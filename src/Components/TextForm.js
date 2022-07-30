@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-const [text, setText] = useState("Enter your text here");
-
 export default function TextForm(props) {
+   const [text, setText] = useState("Enter your text here");
+
    return (
       <>
          <div>
