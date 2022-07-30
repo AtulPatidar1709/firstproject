@@ -20,6 +20,20 @@ export default function TextForm(props) {
       setText(newText);
    };
 
+   const handleReverse = (event) => {
+      let newText = text.split(" ").reverse().join(" ");
+      setText(newText);
+   };
+
+   const copyToClipboard = (event) => {
+      let newText = text;
+      navigator.clipboard.writeText(newText).then(() => {
+         // Alert the user that the action took place.
+         // Nobody likes hidden stuff being done under the hood!
+         alert("Copied to clipboard");
+      });
+   };
+
    const [text, setText] = useState("Enter your text here");
 
    return (
@@ -43,6 +57,15 @@ export default function TextForm(props) {
             </button>
             <button className="btn btn-primary mx-2" onClick={handleLoClick}>
                Lower-Text
+            </button>
+            <button className="btn btn-primary mx-2" onClick={handleReverse}>
+               Text-Reverse
+            </button>
+            <button
+               className="btn btn-primary mx-2 my-2"
+               onClick={copyToClipboard}
+            >
+               Copy-Text
             </button>
          </div>
          <div className="container my-2">
