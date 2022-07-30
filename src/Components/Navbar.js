@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export default function Navbar(props) {
    return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-         <div className="container-fluid">
+         <div className="container-fluid ">
             <a className="navbar-brand" href="/">
                {props.title}
             </a>
@@ -34,12 +34,12 @@ export default function Navbar(props) {
                      </a>
                   </li>
                   <li className="nav-item">
-                     <a className="nav-link" href="/">
+                     <a className="nav-link" href="About.js">
                         {props.aboutText}
                      </a>
                   </li>
                </ul>
-               <form className="d-flex">
+               {/* <form className="d-flex">
                   <input
                      className="form-control me-2"
                      type="search"
@@ -49,7 +49,7 @@ export default function Navbar(props) {
                   <button className="btn btn-outline-success" type="submit">
                      Search
                   </button>
-               </form>
+               </form> */}
             </div>
          </div>
       </nav>
